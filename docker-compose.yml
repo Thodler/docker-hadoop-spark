@@ -123,6 +123,7 @@ services:
     ports:
       - 27017:27017
     volumes:
+      - ./data:/data/import
       - mongo_data:/data/db
 
   mongo-express:
@@ -132,7 +133,7 @@ services:
     ports:
       - 9080:8080
     environment:
-      - ME_CONFIG_MONGODB_SERVER=mongodb
+      ME_CONFIG_MONGODB_SERVER: mongodb
     depends_on:
       - mongodb
 
@@ -141,7 +142,7 @@ services:
     container_name: kvlite
     hostname: kvlite
     environment:
-      - KV_PROXY_PORT=8080
+      KV_PROXY_PORT: 8080
     ports:
       - "9090:8080"
     restart: unless-stopped

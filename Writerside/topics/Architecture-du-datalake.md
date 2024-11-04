@@ -12,7 +12,7 @@ classDiagram
         -String immaticulation
         -String marque
         -String nom
-        -integer puissance
+        -int puissance
         -List longueur
         -int nbPlaces
         -int nbPortes
