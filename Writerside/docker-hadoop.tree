@@ -11,4 +11,5 @@
     <toc-element topic="Diagrammes.md">
         <toc-element topic="Architecture-du-datalake.md"/>
     </toc-element>
+    <toc-element topic="HDFS.md"/>
 </instance-profile>

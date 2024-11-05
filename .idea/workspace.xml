@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Mise en place du TP">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Changement de l'arborescence de la documentation">
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/HDFS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/docker-hadoop.tree" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/docker-hadoop.tree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/Architecture-du-datalake.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/Architecture-du-datalake.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/MongoDb.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/MongoDb.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +65,9 @@
       </map>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -105,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730750610408</updated>
       <workItem from="1730750611919" duration="2903000" />
-      <workItem from="1730792864940" duration="19000" />
+      <workItem from="1730792864940" duration="5729000" />
     </task>
     <task id="LOCAL-00001" summary="[UPD] Mise en place du TP">
       <option name="closed" value="true" />
@@ -139,7 +147,31 @@
       <option name="project" value="LOCAL" />
       <updated>1730751052462</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[UPD] Ajouts des fichiers d'examen">
+      <option name="closed" value="true" />
+      <created>1730792928554</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730792928554</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[UPD] Mise à jour de la documentation">
+      <option name="closed" value="true" />
+      <created>1730793599383</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730793599383</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[UPD] Changement de l'arborescence de la documentation">
+      <option name="closed" value="true" />
+      <created>1730793686027</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730793686027</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +190,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[UPD] Mise en place du TP" />
-    <option name="LAST_COMMIT_MESSAGE" value="[UPD] Mise en place du TP" />
+    <MESSAGE value="[UPD] Ajouts des fichiers d'examen" />
+    <MESSAGE value="[UPD] Mise à jour de la documentation" />
+    <MESSAGE value="[UPD] Changement de l'arborescence de la documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="[UPD] Changement de l'arborescence de la documentation" />
   </component>
 </project>
