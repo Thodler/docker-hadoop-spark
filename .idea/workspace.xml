@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Changement de l'arborescence de la documentation">
-      <change afterPath="$PROJECT_DIR$/Writerside/topics/HDFS.md" afterDir="false" />
+    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Mise en place des commandes HDFS">
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/Commandes.topic" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/HIVE.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Writerside/docker-hadoop.tree" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/docker-hadoop.tree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Architecture-du-datalake.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/Architecture-du-datalake.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/MongoDb.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/MongoDb.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/Commande-Oracle-NoSQL.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/Commande-Oracle-NoSQL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/HDFS.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/HDFS.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730750610408</updated>
       <workItem from="1730750611919" duration="2903000" />
-      <workItem from="1730792864940" duration="5729000" />
+      <workItem from="1730792864940" duration="6551000" />
     </task>
     <task id="LOCAL-00001" summary="[UPD] Mise en place du TP">
       <option name="closed" value="true" />
@@ -171,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730793686027</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[UPD] Mise en place des commandes HDFS">
+      <option name="closed" value="true" />
+      <created>1730798725957</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730798725957</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +201,7 @@
     <MESSAGE value="[UPD] Ajouts des fichiers d'examen" />
     <MESSAGE value="[UPD] Mise à jour de la documentation" />
     <MESSAGE value="[UPD] Changement de l'arborescence de la documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="[UPD] Changement de l'arborescence de la documentation" />
+    <MESSAGE value="[UPD] Mise en place des commandes HDFS" />
+    <option name="LAST_COMMIT_MESSAGE" value="[UPD] Mise en place des commandes HDFS" />
   </component>
 </project>

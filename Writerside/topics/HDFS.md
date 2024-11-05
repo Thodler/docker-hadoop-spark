@@ -10,6 +10,9 @@ Copie des fichiers sur HDFS
 hdfs dfs -mkdir /user/concessionnaire
 ```
 ```bash
+hdfs dfs -put /data/import/Clients_1.csv /user/concessionnaire/clients.csv
+```
+```bash
 hdfs dfs -put /data/import/Catalogue.csv /user/concessionnaire/catalogue.csv
 ```
 ```bash
