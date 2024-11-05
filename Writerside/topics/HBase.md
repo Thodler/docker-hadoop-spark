@@ -11,5 +11,4 @@ hbase shell
 
 ```SQL
 create 'critair', 'caracteristiques', 'taxation'
-
 ```

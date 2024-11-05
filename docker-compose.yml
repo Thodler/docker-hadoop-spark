@@ -124,11 +124,20 @@ services:
       HBASE_MANAGES_ZK: "true"          # Utiliser le ZooKeeper intégré
     ports:
       - "16010:16010"   # Interface Web du HBase Master
+      - "8085:8085"     # Interface Web REST
+      - "9095:9095"     # Interface Web Thrift
       - "16000:16000"   # RPC pour HBase Master
       - "16020:16020"   # RPC pour HBase RegionServer
       - "2181:2181"     # Port pour ZooKeeper intégré
-      - "9090:9090"     # REST API (Stargate)
-      - "9095:9095"     # Thrift API
+      - "8989:8080"     # REST API (Stargate)
+      - "9090:9090"     # Thrift API
+
+#        - "8989:8080"   # API REST
+#        - "8085:8085"   # Interface Web REST
+#        - "9090:9090"   # API Thrift
+#        - "9095:9095"   # Interface Web Thrift
+#        - "2181:2181"   # Zookeeper
+#        - "16010:16010" # Interface Web HBase Master
     volumes:
       - hbase_data:/hbase-data  # Volume pour les données HBase
     depends_on:
