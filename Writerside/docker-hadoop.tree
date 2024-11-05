@@ -8,6 +8,7 @@
 
     <toc-element topic="Commandes.topic">
         <toc-element topic="HIVE.md"/>
+        <toc-element topic="HBase.md"/>
         <toc-element topic="Commande-Oracle-NoSQL.md"/>
         <toc-element topic="HDFS.md"/>
         <toc-element topic="MongoDb.md"/>

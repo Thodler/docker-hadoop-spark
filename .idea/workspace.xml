@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Mise en place des accès à HIVE">
+    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Chargement des données">
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/HBase.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/HIVE.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/HIVE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/docker-hadoop.tree" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/docker-hadoop.tree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +16,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -76,7 +83,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "hbase",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/projets/docker-hadoop-spark",
     "node.js.detected.package.eslint": "true",
@@ -109,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730750610408</updated>
       <workItem from="1730750611919" duration="2903000" />
-      <workItem from="1730792864940" duration="9392000" />
+      <workItem from="1730792864940" duration="16955000" />
     </task>
     <task id="LOCAL-00001" summary="[UPD] Mise en place du TP">
       <option name="closed" value="true" />
@@ -183,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730799520388</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="[UPD] Chargement des données">
+      <option name="closed" value="true" />
+      <created>1730803481569</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730803481569</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +222,7 @@
     <MESSAGE value="[UPD] Changement de l'arborescence de la documentation" />
     <MESSAGE value="[UPD] Mise en place des commandes HDFS" />
     <MESSAGE value="[UPD] Mise en place des accès à HIVE" />
-    <option name="LAST_COMMIT_MESSAGE" value="[UPD] Mise en place des accès à HIVE" />
+    <MESSAGE value="[UPD] Chargement des données" />
+    <option name="LAST_COMMIT_MESSAGE" value="[UPD] Chargement des données" />
   </component>
 </project>
