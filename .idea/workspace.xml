@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Mise en place du TP">
-      <change afterPath="$PROJECT_DIR$/Writerside/topics/MongoDb.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/docker-hadoop.tree" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/docker-hadoop.tree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Architecture-du-datalake.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/Architecture-du-datalake.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,16 +15,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Thodler"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Thodler&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Thodler/docker-hadoop-spark.git",
-    "accountId": "217e2e2d-1031-411f-8bbc-57f27bf25600"
+    "accountId": "4f6bcdb5-e924-41e6-8a65-893c86940392"
   }
 }]]></component>
   <component name="InstanceColorv3">
@@ -64,10 +60,10 @@
       </map>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2oOpjD3u8ntKgspx7vHngKg6rH5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -78,6 +74,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/projets/docker-hadoop-spark",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -108,6 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730750610408</updated>
       <workItem from="1730750611919" duration="2903000" />
+      <workItem from="1730792864940" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="[UPD] Mise en place du TP">
       <option name="closed" value="true" />
