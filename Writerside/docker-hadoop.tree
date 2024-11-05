@@ -8,6 +8,7 @@
 
     <toc-element topic="Commande-Oracle-NoSQL.md"/>
     <toc-element topic="MongoDb.md"/>
-    <toc-element topic="Diagrammes.md"/>
-    <toc-element topic="Architecture-du-datalake.md"/>
+    <toc-element topic="Diagrammes.md">
+        <toc-element topic="Architecture-du-datalake.md"/>
+    </toc-element>
 </instance-profile>
