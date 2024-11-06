@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Mise en place du script d'import avec HDFS">
-      <change afterPath="$PROJECT_DIR$/data/scripts/hive.hql" afterDir="false" />
+    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Mise en place du script d'import avec HIVE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init_import.sh" beforeDir="false" afterPath="$PROJECT_DIR$/init_import.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730887745647</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="[UPD] Mise en place du script d'import avec HIVE">
+      <option name="closed" value="true" />
+      <created>1730894249423</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1730894249423</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +281,7 @@
     <MESSAGE value="[UPD] Mise en place du script d'import avec cassandra" />
     <MESSAGE value="[UPD] Mise en place du script d'import avec mongo" />
     <MESSAGE value="[UPD] Mise en place du script d'import avec HDFS" />
-    <option name="LAST_COMMIT_MESSAGE" value="[UPD] Mise en place du script d'import avec HDFS" />
+    <MESSAGE value="[UPD] Mise en place du script d'import avec HIVE" />
+    <option name="LAST_COMMIT_MESSAGE" value="[UPD] Mise en place du script d'import avec HIVE" />
   </component>
 </project>
