@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Mise en place du script d'import avec HIVE">
+      <change afterPath="$PROJECT_DIR$/conf/hive-site-default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jar/mongo-hadoop-core-2.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jar/mongo-hadoop-hive-1.5.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jar/mongo-java-driver-3.4.2.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/Architecture-du-datalake.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/Architecture-du-datalake.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/hive-site.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/hive-site.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,9 +87,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "script__import",
+    "git-widget-placeholder": "hive-externe-laurent",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/projets/docker-hadoop-spark/data/scripts",
+    "last_opened_file_path": "C:/projets/docker-hadoop-spark/jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,9 +100,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projets\docker-hadoop-spark\jar" />
+      <recent name="C:\projets\docker-hadoop-spark\conf" />
       <recent name="C:\projets\docker-hadoop-spark\data\scripts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projets\docker-hadoop-spark\jar" />
       <recent name="C:\projets\docker-hadoop-spark\data" />
       <recent name="C:\projets\docker-hadoop-spark" />
       <recent name="D:\projets\docker-hadoop-spark\data" />

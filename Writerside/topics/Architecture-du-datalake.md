@@ -13,10 +13,10 @@ classDiagram
         -String marque
         -String nom
         -int puissance
-        -List longueur
+        -String longueur
         -int nbPlaces
         -int nbPortes
-        -List couleur
+        -String couleur
         -bool occasion
         -int prix
     }
