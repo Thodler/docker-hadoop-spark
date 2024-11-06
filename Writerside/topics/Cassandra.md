@@ -16,12 +16,21 @@ USE co2;
 ```
 
 ```sql
-CREATE TABLE voitures_co2 (
-    marque TEXT,
-    modele TEXT,
+CREATE TABLE IF NOT EXISTS crit_air (
+    id INT,
+    marque_modele TEXT PRIMARY KEY,
     bonus_malus TEXT,
-    rejet_co2 INT,
-    cout_energie DECIMAL,
-    PRIMARY KEY ((marque), modele)
+    rejets_co2 FLOAT,
+    cout_energie TEXT
 );
+```
+
+Import des donnée CO2.csv
+```SQL
+COPY crit_air (id, marque_modele, bonus_malus, rejets_co2, cout_energie) FROM '/import/CO2.csv' WITH HEADER = TRUE;
+```
+
+## Commandes utiles
+```SQL
+DROP TABLE IF EXISTS co2.crit_air;
 ```
