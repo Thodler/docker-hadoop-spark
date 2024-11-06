@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Mise en place du script d'import avec cassandra">
+    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Mise en place du script d'import avec mongo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/init_import.sh" beforeDir="false" afterPath="$PROJECT_DIR$/init_import.sh" afterDir="false" />
     </list>
@@ -214,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730882992200</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="[UPD] Mise en place du script d'import avec mongo">
+      <option name="closed" value="true" />
+      <created>1730883630594</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1730883630594</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +261,7 @@
     <MESSAGE value="[UPD] Chargement des données" />
     <MESSAGE value="[UPD] Import des données dans Cassandra" />
     <MESSAGE value="[UPD] Mise en place du script d'import avec cassandra" />
-    <option name="LAST_COMMIT_MESSAGE" value="[UPD] Mise en place du script d'import avec cassandra" />
+    <MESSAGE value="[UPD] Mise en place du script d'import avec mongo" />
+    <option name="LAST_COMMIT_MESSAGE" value="[UPD] Mise en place du script d'import avec mongo" />
   </component>
 </project>
