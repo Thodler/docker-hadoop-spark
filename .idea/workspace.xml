@@ -5,14 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Mise en place du script d'import avec HIVE">
-      <change afterPath="$PROJECT_DIR$/conf/hive-site-default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jar/mongo-hadoop-core-2.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jar/mongo-hadoop-hive-1.5.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jar/mongo-java-driver-3.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jar/mongo-hadoop-hive-2.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jar/mongo-java-driver-3.12.14.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Architecture-du-datalake.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/Architecture-du-datalake.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/hive-site.xml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/hive-site.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/HIVE.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/HIVE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/beeline-log4j2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/hive-env.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/hive-exec-log4j2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/hive-log4j2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/hive-site-default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/hive-site.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/ivysettings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/llap-daemon-log4j2.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hadoop-hive.env" beforeDir="false" afterPath="$PROJECT_DIR$/hadoop-hive.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jar/mongo-hadoop-hive-1.5.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jar/mongo-java-driver-3.4.2.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +97,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "hive-externe-laurent",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/projets/docker-hadoop-spark/jar",
+    "last_opened_file_path": "D:/projets/docker-hadoop-spark/jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,6 +108,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projets\docker-hadoop-spark\jar" />
       <recent name="C:\projets\docker-hadoop-spark\jar" />
       <recent name="C:\projets\docker-hadoop-spark\conf" />
       <recent name="C:\projets\docker-hadoop-spark\data\scripts" />
@@ -129,6 +138,7 @@
       <updated>1730750610408</updated>
       <workItem from="1730750611919" duration="2903000" />
       <workItem from="1730792864940" duration="16955000" />
+      <workItem from="1730922836264" duration="4085000" />
     </task>
     <task id="LOCAL-00001" summary="[UPD] Mise en place du TP">
       <option name="closed" value="true" />

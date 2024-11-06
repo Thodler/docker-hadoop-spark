@@ -10,7 +10,7 @@ Lancer Hive
 hive
 ```
 
-Création de la table Clients
+Création de la table Clients (Table interne)
 ```SQL
 CREATE TABLE clients (
     age INT,
@@ -34,4 +34,14 @@ LOAD DATA INPATH '/user/concessionnaire/clients.csv' INTO TABLE clients;
 Vider la table clients
 ```SQL
 TRUNCATE TABLE clients;
+```
+
+## Commandes utiles
+Lister les jar chargé
+```SQL
+LIST JARS;
+```
+Démarrer Beeline
+```bash
+/opt/hive/bin/beeline -u jdbc:hive2://localhost:10000
 ```
