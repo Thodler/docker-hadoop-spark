@@ -16,3 +16,18 @@ FIELDS TERMINATED BY ','
 STORED AS TEXTFILE;
 
 LOAD DATA INPATH '/user/concessionnaire/clients.csv' INTO TABLE clients;
+
+
+CREATE EXTERNAL TABLE IF NOT EXISTS catalogue_ext (
+    marque STRING,
+    Nom STRING,
+    Puissance STRING,
+    Longueur STRING,
+    nbPlaces STRING,
+    nbPortes STRING,
+    Couleur STRING,
+    Occasion STRING,
+    Prix STRING
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+STORED AS TEXTFILE LOCATION '/user/concessionnaire';

@@ -35,3 +35,21 @@ Vider la table clients
 ```SQL
 TRUNCATE TABLE clients;
 ```
+
+Création de la table externe Catalogue_ext
+```SQL
+CREATE EXTERNAL TABLE catalogue_ext ( 
+    marque STRING,
+    Nom STRING,
+    Puissance STRING,
+    Longueur STRING,
+    nbPlaces STRING,
+    nbPortes STRING,
+    Couleur STRING,
+    Occasion STRING,
+    Prix STRING
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE LOCATION '/user/concessionnaire';
+
+```

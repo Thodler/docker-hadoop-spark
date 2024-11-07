@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Mise en place du script d'import avec HIVE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/HIVE.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/HIVE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/hive.hql" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/hive.hql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +82,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "script__import",
+    "git-widget-placeholder": "hive-hdfs",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/projets/docker-hadoop-spark/data/scripts",
     "node.js.detected.package.eslint": "true",
