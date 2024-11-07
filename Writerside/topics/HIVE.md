@@ -26,6 +26,24 @@ FIELDS TERMINATED BY ','
 STORED AS TEXTFILE;
 ```
 
+Creation d'une table externe
+```sql
+CREATE EXTERNAL TABLE IF NOT EXISTS concessionnaire.immatriculations_ext (
+        immatriculation STRING,
+        marque STRING,
+        nom STRING,
+        puissance INT,
+        longueur STRING,
+        nbPlaces INT,
+        nbPortes INT,
+        couleur STRING,
+        occasion STRING,
+        prix INT
+    )
+    STORED AS PARQUET
+    LOCATION '/user/hive/warehouse/concessionnaire.db/immatriculations_ext';
+```
+
 Chargement des données dans la table
 ```SQL
 LOAD DATA INPATH '/user/concessionnaire/clients.csv' INTO TABLE clients;
@@ -34,6 +52,11 @@ LOAD DATA INPATH '/user/concessionnaire/clients.csv' INTO TABLE clients;
 Vider la table clients
 ```SQL
 TRUNCATE TABLE clients;
+```
+
+Supprimer une table
+```sql
+DROP TABLE IF EXISTS concessionnaire.immatriculations_ext;
 ```
 
 ## Commandes utiles
