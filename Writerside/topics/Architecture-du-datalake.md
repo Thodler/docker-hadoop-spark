@@ -8,7 +8,7 @@
 
 ```mermaid
 classDiagram  
-    class Immatriculation{
+    class Immatriculations{
         -String immaticulation
         -String marque
         -String nom
