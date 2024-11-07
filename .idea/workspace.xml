@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Mise en place du script d'import avec HIVE">
-      <change afterPath="$PROJECT_DIR$/jar/bson-5.1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jar/mongo-spark-connector_2.12-10.4.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jar/mongo-spark-connector_2.13-10.4.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jar/mongodb-driver-sync-4.4.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jar/mongodb-driver-sync-5.1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jar/mongodb-driver-sync-5.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spark-apps/mongo_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/Spark.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Architecture-du-datalake.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/Architecture-du-datalake.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hadoop-hive.env" beforeDir="false" afterPath="$PROJECT_DIR$/hadoop-hive.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jar/mongo-java-driver-3.12.14.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jar/mongo-java-driver-3.12.14.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/docker-hadoop.tree" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/docker-hadoop.tree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-apps/mongo_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/spark-apps/mongo_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +29,12 @@
     &quot;assignee&quot;: &quot;Thodler&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Thodler/docker-hadoop-spark.git&quot;,
-    &quot;accountId&quot;: &quot;217e2e2d-1031-411f-8bbc-57f27bf25600&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Thodler/docker-hadoop-spark.git",
+    "accountId": "4f6bcdb5-e924-41e6-8a65-893c86940392"
   }
-}</component>
+}]]></component>
   <component name="InstanceColorv3">
     <option name="map">
       <map>
@@ -88,20 +80,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "hive-externe-laurent",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/projets/docker-hadoop-spark/jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;hive-externe-laurent&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/projets/docker-hadoop-spark/jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projets\docker-hadoop-spark\jar" />
