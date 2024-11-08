@@ -52,5 +52,10 @@ classDiagram
         -bool deuxiemeVoiture
     }
     
-    
+    class Co2{
+        -String marqueModel
+        -String bonusMalus
+        -int rejetsCo2
+        -String coutEnergie
+    }
 ```

@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS crit_air (
 );
 ```
 
-Import des donnée CO2.csv
+Import des données CO2.csv
 ```SQL
 COPY crit_air (id, marque_modele, bonus_malus, rejets_co2, cout_energie) FROM '/import/CO2.csv' WITH HEADER = TRUE;
 ```

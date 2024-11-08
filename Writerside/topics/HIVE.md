@@ -44,6 +44,17 @@ CREATE EXTERNAL TABLE IF NOT EXISTS concessionnaire.immatriculations_ext (
     LOCATION '/user/hive/warehouse/concessionnaire.db/immatriculations_ext';
 ```
 
+```sql
+CREATE EXTERNAL TABLE IF NOT EXISTS crit_air_ext (
+    marque_modele STRING,
+    bonus_malus STRING,
+    rejets_co2 FLOAT,
+    cout_energie STRING
+)
+STORED AS PARQUET
+LOCATION '/user/hive/warehouse/concessionnaire.db/crit_air_ext';
+```
+
 Chargement des données dans la table
 ```SQL
 LOAD DATA INPATH '/user/concessionnaire/clients.csv' INTO TABLE clients;
@@ -57,6 +68,10 @@ TRUNCATE TABLE clients;
 Supprimer une table
 ```sql
 DROP TABLE IF EXISTS concessionnaire.immatriculations_ext;
+```
+
+```sql
+DROP TABLE IF EXISTS concessionnaire.crit_air_ext;
 ```
 
 ## Commandes utiles
