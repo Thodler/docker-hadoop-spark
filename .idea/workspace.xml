@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Mise en place du script d'import avec HIVE">
+    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Progression des erreurs spark">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/HIVE.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/HIVE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-apps/mongo_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/spark-apps/mongo_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/Spark.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/Spark.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scripts/hive.hql" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/hive.hql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init_import.sh" beforeDir="false" afterPath="$PROJECT_DIR$/init_import.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +91,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -111,8 +112,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23726.102" />
+        <option value="bundled-python-sdk-5e1850174b45-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23726.102" />
       </set>
     </attachedChunks>
   </component>
@@ -128,6 +129,7 @@
       <workItem from="1730792864940" duration="16955000" />
       <workItem from="1730922836264" duration="4590000" />
       <workItem from="1730964240152" duration="10137000" />
+      <workItem from="1731052352260" duration="1268000" />
     </task>
     <task id="LOCAL-00001" summary="[UPD] Mise en place du TP">
       <option name="closed" value="true" />
@@ -268,7 +270,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="cassandra" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

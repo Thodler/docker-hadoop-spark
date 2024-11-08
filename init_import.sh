@@ -50,5 +50,18 @@ done
 
 docker exec -i hive-server bash -c "hive -f '/import/hive.hql'"
 
+echo "----- Exécution de Spark -----"
+
+# Attendre que Spark soit prêt
+echo "Attente de Spark..."
+until docker exec spark-master nc -z localhost 8080; do
+  echo "Spark n'est pas encore prêt, attente de 5 secondes..."
+  sleep 5
+done
+
+echo "Spark est prêt, exécution du script Spark."
+docker exec -i spark-master bash -c "spark/bin/spark-submit --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.1 spark-app/mongo_test.py"
+
+
 echo "===== Importation terminée ====="
 sleep 10
