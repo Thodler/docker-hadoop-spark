@@ -36,20 +36,37 @@ Vider la table clients
 TRUNCATE TABLE clients;
 ```
 
-Création de la table externe Catalogue_ext
+Création de la table externe catalogue_ext
 ```SQL
-CREATE EXTERNAL TABLE catalogue_ext ( 
+CREATE EXTERNAL TABLE IF NOT EXISTS catalogue_ext ( 
     marque STRING,
-    Nom STRING,
-    Puissance STRING,
-    Longueur STRING,
+    nom STRING,
+    puissance STRING,
+    longueur STRING,
     nbPlaces STRING,
     nbPortes STRING,
-    Couleur STRING,
-    Occasion STRING,
-    Prix STRING
+    couleur STRING,
+    occasion STRING,
+    prix STRING
 )
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
 STORED AS TEXTFILE LOCATION '/user/concessionnaire';
 
+```
+
+Création de la table externe Marketing_ext
+```SQL
+CREATE EXTERNAL TABLE IF NOT EXISTS marketing_ext ( 
+    age STRING,
+    sexe STRING,
+    taux STRING,
+    situationFamiliale STRING,
+    nbEnfantAcharge STRING,
+    deuxiemeVoiture STRING
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE LOCATION '/user/concessionnaire'
+TBLPROPERTIES (
+    "skip.header.line.count"="1"
+);
 ```

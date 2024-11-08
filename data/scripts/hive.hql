@@ -20,14 +20,31 @@ LOAD DATA INPATH '/user/concessionnaire/clients.csv' INTO TABLE clients;
 
 CREATE EXTERNAL TABLE IF NOT EXISTS catalogue_ext (
     marque STRING,
-    Nom STRING,
-    Puissance STRING,
-    Longueur STRING,
-    nbPlaces STRING,
-    nbPortes STRING,
-    Couleur STRING,
-    Occasion STRING,
-    Prix STRING
+    nom STRING,
+    puissance INT,
+    longueur STRING,
+    nbPlaces INT,
+    nbPortes INT,
+    couleur STRING,
+    occasion BOOLEAN,
+    prix FLOAT
 )
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
-STORED AS TEXTFILE LOCATION '/user/concessionnaire';
+STORED AS TEXTFILE LOCATION '/user/concessionnaire/catalogue'
+TBLPROPERTIES (
+    "skip.header.line.count"="1"
+);
+
+CREATE EXTERNAL TABLE IF NOT EXISTS marketing_ext (
+    age INT,
+    sexe STRING,
+    taux FLOAT,
+    situationFamiliale STRING,
+    nbEnfantAcharge INT,
+    deuxiemeVoiture BOOLEAN
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+STORED AS TEXTFILE LOCATION '/user/concessionnaire/marketing'
+TBLPROPERTIES (
+    "skip.header.line.count"="1"
+);

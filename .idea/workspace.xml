@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Mise en place du script d'import avec HIVE">
+    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Import des données dans Cassandra">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Writerside/topics/HIVE.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/HIVE.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scripts/hive.hql" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/hive.hql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init_import.sh" beforeDir="false" afterPath="$PROJECT_DIR$/init_import.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,20 +80,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "hive-hdfs",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/projets/docker-hadoop-spark/data/scripts",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;hive-hdfs&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projets/docker-hadoop-spark/data/scripts&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: [
+      &quot;C:/projet/docker-hadoop-spark/Writerside/topics/HIVE.md&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\projets\docker-hadoop-spark\data\scripts" />
@@ -102,14 +108,6 @@
       <recent name="C:\projets\docker-hadoop-spark" />
       <recent name="D:\projets\docker-hadoop-spark\data" />
     </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -242,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730894249423</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="[UPD] Import des données dans Cassandra">
+      <option name="closed" value="true" />
+      <created>1730995387521</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1730995387521</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,11 +285,11 @@
     <MESSAGE value="[UPD] Mise en place des commandes HDFS" />
     <MESSAGE value="[UPD] Mise en place des accès à HIVE" />
     <MESSAGE value="[UPD] Chargement des données" />
-    <MESSAGE value="[UPD] Import des données dans Cassandra" />
     <MESSAGE value="[UPD] Mise en place du script d'import avec cassandra" />
     <MESSAGE value="[UPD] Mise en place du script d'import avec mongo" />
     <MESSAGE value="[UPD] Mise en place du script d'import avec HDFS" />
     <MESSAGE value="[UPD] Mise en place du script d'import avec HIVE" />
-    <option name="LAST_COMMIT_MESSAGE" value="[UPD] Mise en place du script d'import avec HIVE" />
+    <MESSAGE value="[UPD] Import des données dans Cassandra" />
+    <option name="LAST_COMMIT_MESSAGE" value="[UPD] Import des données dans Cassandra" />
   </component>
 </project>

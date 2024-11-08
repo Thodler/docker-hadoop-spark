@@ -14,9 +14,11 @@ done
 echo "HDFS est prêt, importation des fichiers."
 
 docker exec namenode bash -c "hdfs dfs -mkdir -p /user/concessionnaire"
+docker exec namenode bash -c "hdfs dfs -mkdir -p /user/concessionnaire/catalogue"
+docker exec namenode bash -c "hdfs dfs -mkdir -p /user/concessionnaire/marketing"
 docker exec namenode bash -c "hdfs dfs -put /data/import/Clients_1.csv /user/concessionnaire/clients.csv"
-docker exec namenode bash -c "hdfs dfs -put /data/import/Catalogue.csv /user/concessionnaire/catalogue.csv"
-docker exec namenode bash -c "hdfs dfs -put /data/import/Marketing.csv /user/concessionnaire/marketing.csv"
+docker exec namenode bash -c "hdfs dfs -put /data/import/Catalogue.csv /user/concessionnaire/catalogue/catalogue.csv"
+docker exec namenode bash -c "hdfs dfs -put /data/import/Marketing.csv /user/concessionnaire/marketing/marketing.csv"
 
 echo "----- Importation sur Cassandra -----"
 # Attendre que Cassandra soit prêt
