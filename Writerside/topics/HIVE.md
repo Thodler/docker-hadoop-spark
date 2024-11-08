@@ -54,6 +54,43 @@ CREATE EXTERNAL TABLE IF NOT EXISTS crit_air_ext (
 STORED AS PARQUET
 LOCATION '/user/hive/warehouse/concessionnaire.db/crit_air_ext';
 ```
+Création de la table externe catalogue_ext
+```SQL
+CREATE EXTERNAL TABLE IF NOT EXISTS catalogue_ext (
+    marque STRING,
+    nom STRING,
+    puissance INT,
+    longueur STRING,
+    nbPlaces INT,
+    nbPortes INT,
+    couleur STRING,
+    occasion BOOLEAN,
+    prix FLOAT
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+STORED AS TEXTFILE LOCATION '/user/concessionnaire/catalogue'
+TBLPROPERTIES (
+    "skip.header.line.count"="1"
+);
+
+```
+
+Création de la table externe Marketing_ext
+```SQL
+CREATE EXTERNAL TABLE IF NOT EXISTS marketing_ext (
+    age INT,
+    sexe STRING,
+    taux FLOAT,
+    situationFamiliale STRING,
+    nbEnfantAcharge INT,
+    deuxiemeVoiture BOOLEAN
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+STORED AS TEXTFILE LOCATION '/user/concessionnaire/marketing'
+TBLPROPERTIES (
+    "skip.header.line.count"="1"
+);
+```
 
 Chargement des données dans la table
 ```SQL
