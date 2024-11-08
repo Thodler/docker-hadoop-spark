@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] Import des données dans Cassandra">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3e3b27e4-145a-4bcd-bb61-000c8d2ebf80" name="Changes" comment="[UPD] script creation table marketing_ext">
       <change beforePath="$PROJECT_DIR$/Writerside/topics/HIVE.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/HIVE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scripts/hive.hql" beforeDir="false" afterPath="$PROJECT_DIR$/data/scripts/hive.hql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init_import.sh" beforeDir="false" afterPath="$PROJECT_DIR$/init_import.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730995387521</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="[UPD] script creation table marketing_ext">
+      <option name="closed" value="true" />
+      <created>1731060452494</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731060452494</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +270,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="cassandra" />
+                        <option value="hive-hdfs" />
                       </list>
                     </value>
                   </entry>
@@ -290,6 +295,7 @@
     <MESSAGE value="[UPD] Mise en place du script d'import avec HDFS" />
     <MESSAGE value="[UPD] Mise en place du script d'import avec HIVE" />
     <MESSAGE value="[UPD] Import des données dans Cassandra" />
-    <option name="LAST_COMMIT_MESSAGE" value="[UPD] Import des données dans Cassandra" />
+    <MESSAGE value="[UPD] script creation table marketing_ext" />
+    <option name="LAST_COMMIT_MESSAGE" value="[UPD] script creation table marketing_ext" />
   </component>
 </project>
