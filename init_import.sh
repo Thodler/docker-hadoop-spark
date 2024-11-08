@@ -60,7 +60,8 @@ until docker exec spark-master nc -z localhost 8080; do
 done
 
 echo "Spark est prêt, exécution du script Spark."
-docker exec -i spark-master bash -c "spark/bin/spark-submit --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.1 spark-app/mongo_test.py"
+docker exec -i spark-master bash -c "spark/bin/spark-submit --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.1 spark-app/mongo_import.py"
+docker exec -i spark-master bash -c "spark/bin/spark-submit --packages com.datastax.spark:spark-cassandra-connector_2.12:3.1.0 spark-app/cassandra_import.py"
 
 
 echo "===== Importation terminée ====="

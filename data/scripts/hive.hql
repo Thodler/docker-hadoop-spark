@@ -32,11 +32,11 @@ CREATE EXTERNAL TABLE IF NOT EXISTS concessionnaire.immatriculations_ext (
 STORED AS PARQUET
 LOCATION '/user/hive/warehouse/concessionnaire.db/immatriculations_ext';
 
-CREATE EXTERNAL TABLE IF NOT EXISTS concessionnaire.co2_ext (
+CREATE EXTERNAL TABLE IF NOT EXISTS concessionnaire.crit_air_ext (
     marque_modele STRING,
     bonus_malus STRING,
-    cout_energie STRING,
-    rejets_co2 INT
+    rejets_co2 FLOAT,
+    cout_energie STRING
 )
 STORED AS PARQUET
-LOCATION '/user/hive/warehouse/concessionnaire.db/co2_ext';
+LOCATION '/user/hive/warehouse/concessionnaire.db/crit_air_ext';
