@@ -4,8 +4,9 @@
 
 <instance-profile id="docker-hadoop"
                  name="docker-hadoop"
-                 start-page="Oracle-NoSQL.md">
+                 start-page="Home.md">
 
+    <toc-element topic="Home.md"/>
     <toc-element topic="Commandes.topic">
         <toc-element topic="Spark.md"/>
         <toc-element topic="Cassandra.md"/>
