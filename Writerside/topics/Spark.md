@@ -1,5 +1,7 @@
 # Spark
 
+[SheetCheat](https://images.datacamp.com/image/upload/v1676302905/Marketing/Blog/PySpark_SQL_Cheat_Sheet.pdf)
+
 Executer CLI Spark dans le container
 ```sql
 /spark/bin/pyspark --master spark://spark-master:7077

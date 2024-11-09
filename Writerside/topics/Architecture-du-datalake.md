@@ -1,10 +1,10 @@
 # Architecture du datalake
 
 ## Localisation des informations
-| MongoDB         | HBase | HDFS      | HIVE   |
-|-----------------|-------|-----------|--------|
-| Immatriculation | Co2   | Catalogue | Client |
-| -               | -     | Marketing |        |
+| MongoDB         | Cassandra | HDFS      | HIVE   |
+|-----------------|-----------|-----------|--------|
+| Immatriculation | Co2       | Catalogue | Client |
+| -               | -         | Marketing |        |
 
 ```mermaid
 classDiagram  

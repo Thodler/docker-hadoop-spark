@@ -8,14 +8,12 @@ spark = SparkSession.builder\
     .getOrCreate()
 
 spark.catalog.clearCache()
-
-spark.sql("SHOW DATABASES").show()
 spark.sql("USE concessionnaire")
-spark.sql("SHOW TABLES").show()
-spark.sql("SELECT * FROM marketing_ext LIMIT 5").show()
-# co2_df = spark.sql("SELECT * FROM concessionnaire.crit_air_ext")
-# catalogue_df = spark.sql("SELECT * FROM concessionnaire.clients")
-# #
-# #
-# co2_df.show()
-# catalogue_df.show()
+
+df_catalogue = spark.sql("SELECT * FROM catalogue_ext")
+df_co2 = spark.sql("SELECT * FROM crit_air_ext")
+
+df_catalogue = df_catalogue.filter(df_catalogue['marque'] != 'marque')
+
+df_catalogue.show()
+df_co2.show()
