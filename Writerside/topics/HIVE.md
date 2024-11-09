@@ -29,19 +29,19 @@ STORED AS TEXTFILE;
 Creation d'une table externe
 ```sql
 CREATE EXTERNAL TABLE IF NOT EXISTS concessionnaire.immatriculations_ext (
-        immatriculation STRING,
-        marque STRING,
-        nom STRING,
-        puissance INT,
-        longueur STRING,
-        nbPlaces INT,
-        nbPortes INT,
-        couleur STRING,
-        occasion STRING,
-        prix INT
-    )
-    STORED AS PARQUET
-    LOCATION '/user/hive/warehouse/concessionnaire.db/immatriculations_ext';
+    immatriculation STRING,
+    marque STRING,
+    nom STRING,
+    puissance INT,
+    longueur STRING,
+    nbPlaces INT,
+    nbPortes INT,
+    couleur STRING,
+    occasion STRING,
+    prix INT
+)
+STORED AS PARQUET
+LOCATION '/user/hive/warehouse/concessionnaire.db/immatriculations_ext';
 ```
 
 ```sql
@@ -90,6 +90,11 @@ STORED AS TEXTFILE LOCATION '/user/concessionnaire/marketing'
 TBLPROPERTIES (
     "skip.header.line.count"="1"
 );
+```
+
+Créate une base de données
+```sql
+CREATE DATABASE IF NOT EXISTS concessionnaire;
 ```
 
 Chargement des données dans la table

@@ -5,7 +5,7 @@ services:
     restart: always
     ports:
       - 9870:9870
-      - 9010:9000
+      - 9000:9000
     volumes:
       - ./data:/data/import
       - hadoop_namenode:/hadoop/dfs/name
@@ -64,6 +64,7 @@ services:
     depends_on:
       - namenode
       - datanode
+      - hive-metastore
     ports:
       - "8080:8080"
       - "7077:7077"
@@ -72,6 +73,7 @@ services:
       - ./jar/bson-5.1.4.jar:/spark/jars/bson-5.1.4.jar
       - ./jar/mongo-spark-connector_2.12-10.4.0.jar:/spark/jars/mongo-spark-connector_2.12-10.4.0.jar
       - ./spark-apps:/spark-app
+      - ./master/conf/hive-site.xml:/spark/conf/hive-site.xml
     environment:
       - INIT_DAEMON_STEP=setup_spark
       - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
@@ -95,6 +97,7 @@ services:
       - ./jar/bson-5.1.4.jar:/spark/jars/bson-5.1.4.jar
       - ./jar/mongo-spark-connector_2.12-10.4.0.jar:/spark/jars/mongo-spark-connector_2.12-10.4.0.jar
       - ./spark-apps:/spark-app
+      - ./master/conf/hive-site.xml:/spark/conf/hive-site.xml
     environment:
       - "SPARK_MASTER=spark://spark-master:7077"
       - CORE_CONF_fs_defaultFS=hdfs://namenode:9000

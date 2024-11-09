@@ -59,3 +59,20 @@ classDiagram
         -String coutEnergie
     }
 ```
+
+```mermaid
+graph BT
+    NAMENODE[Namenode\nPorts: 9870, 9000] --> HDFS[HDFS]
+    DATANODE[Datanode\nPort: 9864] --> HDFS
+    RESOURCEMANAGER[ResourceManager] --> NAMENODE
+    RESOURCEMANAGER --> DATANODE
+    SPARK[Spark] --> RESOURCEMANAGER
+    SPARK --> HDFS
+
+    HIVE[Hive\nDatabase] --> HDFS
+    MONGODB[MongoDB\nDatabase] --> SPARK
+    CASSANDRA[Cassandra\nDatabase] --> SPARK
+
+    CATALOGUE[Table catalogue] --> HIVE
+    CO2_EXT[Table CO2] --> HIVE
+```

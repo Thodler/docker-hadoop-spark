@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS concessionnaire;
 
 USE concessionnaire;
 
-CREATE TABLE IF NOT EXISTS concessionnaire.clients (
+CREATE TABLE IF NOT EXISTS clients (
      age INT,
      sexe STRING,
      taux INT,
@@ -20,7 +20,7 @@ TBLPROPERTIES (
 
 LOAD DATA INPATH '/user/hive/warehouse/concessionnaire.db/clients.csv' INTO TABLE clients;
 
-CREATE EXTERNAL TABLE IF NOT EXISTS concessionnaire.immatriculations_ext (
+CREATE EXTERNAL TABLE IF NOT EXISTS immatriculations_ext (
     immatriculation STRING,
     marque STRING,
     nom STRING,
@@ -35,7 +35,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS concessionnaire.immatriculations_ext (
 STORED AS PARQUET
 LOCATION '/user/hive/warehouse/concessionnaire.db/immatriculations_ext';
 
-CREATE EXTERNAL TABLE IF NOT EXISTS concessionnaire.crit_air_ext (
+CREATE EXTERNAL TABLE IF NOT EXISTS crit_air_ext (
     marque_modele STRING,
     bonus_malus STRING,
     rejets_co2 FLOAT,
@@ -45,7 +45,7 @@ STORED AS PARQUET
 LOCATION '/user/hive/warehouse/concessionnaire.db/crit_air_ext';
 
 
-CREATE EXTERNAL TABLE IF NOT EXISTS concessionnaire.catalogue_ext (
+CREATE EXTERNAL TABLE IF NOT EXISTS catalogue_ext (
     marque STRING,
     nom STRING,
     puissance INT,
@@ -62,7 +62,7 @@ TBLPROPERTIES (
     "skip.header.line.count"="1"
 );
 
-CREATE EXTERNAL TABLE IF NOT EXISTS concessionnaire.marketing_ext (
+CREATE EXTERNAL TABLE IF NOT EXISTS marketing_ext (
     age INT,
     sexe STRING,
     taux FLOAT,
@@ -71,7 +71,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS concessionnaire.marketing_ext (
     deuxiemeVoiture BOOLEAN
 )
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
-STORED AS TEXTFILE LOCATION '/user/hive/warehouse/concessionnaire.db/catalogue_ext'
+STORED AS TEXTFILE LOCATION '/user/hive/warehouse/concessionnaire.db/marketing_ext'
 TBLPROPERTIES (
     "skip.header.line.count"="1"
 );
