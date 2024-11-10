@@ -102,12 +102,42 @@ services:
       - "SPARK_MASTER=spark://spark-master:7077"
       - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
       - SPARK_JARS=/opt/spark/jars/mongo-spark-connector_2.12-10.4.0.jar
-      - SPARK_EXECUTOR_MEMORY=4g
-      - SPARK_DRIVER_MEMORY=4g
-    deploy:
-      resources:
-        limits:
-          memory: 4g
+
+  spark-worker-2:
+    image: bde2020/spark-worker:3.1.2-hadoop3.2
+    container_name: spark-worker-2
+    depends_on:
+      - spark-master
+    ports:
+      - "8082:8081"
+    volumes:
+      - ./jar/mongo-driver-sync-5.1.4.jar:/spark/jars/mongo-driver-sync-5.1.4.jar
+      - ./jar/bson-5.1.4.jar:/spark/jars/bson-5.1.4.jar
+      - ./jar/mongo-spark-connector_2.12-10.4.0.jar:/spark/jars/mongo-spark-connector_2.12-10.4.0.jar
+      - ./spark-apps:/spark-app
+      - ./master/conf/hive-site.xml:/spark/conf/hive-site.xml
+    environment:
+      - "SPARK_MASTER=spark://spark-master:7077"
+      - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
+      - SPARK_JARS=/opt/spark/jars/mongo-spark-connector_2.12-10.4.0.jar
+
+  spark-worker-3:
+    image: bde2020/spark-worker:3.1.2-hadoop3.2
+    container_name: spark-worker-3
+    depends_on:
+      - spark-master
+    ports:
+      - "8083:8081"
+    volumes:
+      - ./jar/mongo-driver-sync-5.1.4.jar:/spark/jars/mongo-driver-sync-5.1.4.jar
+      - ./jar/bson-5.1.4.jar:/spark/jars/bson-5.1.4.jar
+      - ./jar/mongo-spark-connector_2.12-10.4.0.jar:/spark/jars/mongo-spark-connector_2.12-10.4.0.jar
+      - ./spark-apps:/spark-app
+      - ./master/conf/hive-site.xml:/spark/conf/hive-site.xml
+    environment:
+      - "SPARK_MASTER=spark://spark-master:7077"
+      - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
+      - SPARK_JARS=/opt/spark/jars/mongo-spark-connector_2.12-10.4.0.jar
 
   hive-server:
     image: bde2020/hive:2.3.2-postgresql-metastore
@@ -121,7 +151,6 @@ services:
       HIVE_CORE_CONF_javax_jdo_option_ConnectionURL: "jdbc:postgresql://hive-metastore/metastore"
       SERVICE_PRECONDITION: "hive-metastore:9083"
       HIVE_AUX_JARS_PATH: /opt/hive/auxlib/*.jar
-      HADOOP_CLASSPATH: /opt/hive/lib/hive-serde-2.3.2.jar:/opt/hive/auxlib/mongo-hadoop-core-2.0.2.jar:/opt/hive/auxlib/mongo-java-driver-3.12.14.jar:/opt/hive/auxlib/mongo-hadoop-hive-2.0.2.jar:$HADOOP_CLASSPATH
     ports:
       - "10000:10000"
     volumes:

@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 
 # Initialiser la session Spark avec le connecteur Cassandra
 spark = SparkSession.builder \
-    .appName("Cassandra Data Processing") \
+    .appName("Cassandra to Hive") \
     .config("spark.cassandra.connection.host", "cassandra") \
     .config("spark.jars.packages", "com.datastax.spark:spark-cassandra-connector_2.12:3.0.0") \
     .enableHiveSupport() \
