@@ -174,8 +174,7 @@ services:
       - SPARK_HOME= /spark
       - HADOOP_CONF_DIR=/etc/hadoop
     volumes:
-      - ./zeppelin/notebook:/opt/zeppelin/notebook
-      - ./zeppelin/logs:/zeppelin/logs
+      - ./notebook:/opt/zeppelin/notebook/Concessionnaire
       - spark:/spark
       - ./master/conf/hive-site.xml:/spark/conf/hive-site.xml
     depends_on:
@@ -185,7 +184,7 @@ services:
     image: cassandra:latest
     container_name: cassandra
     ports:
-      - "9042:9042"  # Port par défaut pour les connexions CQL
+      - "9042:9042"
     environment:
       - CASSANDRA_CLUSTER_NAME=TestCluster
       - CASSANDRA_DC=DC1

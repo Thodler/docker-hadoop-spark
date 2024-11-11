@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/notebook" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/zeppelin/notebook" vcs="Git" />
   </component>
 </project>
