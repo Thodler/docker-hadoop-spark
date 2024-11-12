@@ -69,9 +69,9 @@ services:
       - "8080:8080"
       - "7077:7077"
     volumes:
-      - ./spark-apps:/spark-app
+      - .spark-apps:/spark-app
       - ./master/conf/hive-site.xml:/spark/conf/hive-site.xml
-      - spark:/spark
+      - spark:/spark/
     environment:
       - INIT_DAEMON_STEP=setup_spark
       - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
@@ -174,7 +174,6 @@ services:
       - SPARK_HOME= /spark
       - HADOOP_CONF_DIR=/etc/hadoop
     volumes:
-      - ./notebook:/opt/zeppelin/notebook/Concessionnaire
       - spark:/spark
       - ./master/conf/hive-site.xml:/spark/conf/hive-site.xml
     depends_on:
