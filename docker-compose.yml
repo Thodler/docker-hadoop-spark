@@ -163,21 +163,34 @@ services:
     ports:
       - "8089:8089"
 
-  zeppelin:
-    image: apache/zeppelin:0.10.0
-    container_name: zeppelin
-    ports:
-      - "9099:8080"
+  jupyter:
+    image: jupyter/all-spark-notebook:spark-3.1.2
+    container_name: notebook
     environment:
-      - ZEPPELIN_IN_DOCKER=true
-      - SPARK_MASTER=spark://spark-master:7077
-      - SPARK_HOME= /spark
-      - HADOOP_CONF_DIR=/etc/hadoop
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - JUPYTER_ENABLE_LAB=yes
     volumes:
-      - spark:/spark
-      - ./master/conf/hive-site.xml:/spark/conf/hive-site.xml
+      - ./notebooks:/home/jovyan/work
+      - ./master/conf/hive-site.xml:/usr/local/spark/conf/hive-site.xml
+    ports:
+      - "8888:8888"
     depends_on:
       - spark-master
+#  zeppelin:
+#    image: apache/zeppelin:0.10.0
+#    container_name: zeppelin
+#    ports:
+#      - "9099:8080"
+#    environment:
+#      - ZEPPELIN_IN_DOCKER=true
+#      - SPARK_MASTER=spark://spark-master:7077
+#      - SPARK_HOME= /spark
+#      - HADOOP_CONF_DIR=/etc/hadoop
+#    volumes:
+#      - spark:/spark
+#      - ./master/conf/hive-site.xml:/spark/conf/hive-site.xml
+#    depends_on:
+#      - spark-master
 
   cassandra:
     image: cassandra:latest
