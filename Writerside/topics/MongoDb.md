@@ -19,6 +19,11 @@ Changer de BDD
 # use database
 use concessionnaire
 ```
+Vider la collection immatriculation
+```bash
+# use database
+db.immatriculations.deleteMany({})
+```
 Afficher un résultat de la collection
 ```bash
 # db.la_collection.findOne()

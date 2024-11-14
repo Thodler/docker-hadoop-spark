@@ -10,6 +10,11 @@ Lancer Hive
 hive
 ```
 
+Vider la table Clients
+```SQL
+TRUNCATE TABLE clients
+```
+
 Création de la table Clients (Table interne)
 ```SQL
 CREATE TABLE clients (
