@@ -203,3 +203,23 @@ df_catalogue_with_moyennes = df_catalogue_with_co2.withColumn(
 # Nettoyer les colonnes inutiles
 df_catalogue_with_moyennes = df_catalogue_with_moyennes.drop("modele_co2", "moyenne_bonus_malus_marque", "moyenne_rejets_co2_marque", "moyenne_cout_energie_marque")
 df_catalogue_with_moyennes.show(n=1000)
+
+# Nom de la table cible
+table_name = "catalogue"
+
+table_exists = spark._jsparkSession.catalog().tableExists("concessionnaire", table_name)
+
+# Nom de la table cible
+table_name = "catalogue"
+
+# Vérifier si la table existe en exécutant une requête SQL
+table_exists = spark._jsparkSession.catalog().tableExists("concessionnaire", table_name)
+
+if not table_exists:
+    # Créer la table si elle n'existe pas
+    print('Création et enregistrement de la table "catalogue"')
+    df_catalogue_with_moyennes.write.saveAsTable(table_name)
+else:
+    # Si la table existe, remplacer ou insérer dans la table
+    print('Enregistrement dans la table "catalogue"')
+    df_catalogue_with_moyennes.write.mode("overwrite").saveAsTable(table_name)
