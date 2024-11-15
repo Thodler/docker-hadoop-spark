@@ -2,12 +2,7 @@
 
 Connexion au container
 ```bash
-docker exec -it hive-server bash
-```
-
-Lancer Hive
-```bash
-hive
+docker exec -it hive-server hive
 ```
 
 Vider la table Clients
@@ -129,4 +124,9 @@ LIST JARS;
 Démarrer Beeline
 ```bash
 /opt/hive/bin/beeline -u jdbc:hive2://localhost:10000
+```
+
+Modifier une table
+```sql
+ALTER TABLE crit_air_ext CHANGE cout_energie cout_energie STRING;
 ```
