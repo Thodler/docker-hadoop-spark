@@ -120,3 +120,8 @@ Démarrer Beeline
 ```bash
 /opt/hive/bin/beeline -u jdbc:hive2://localhost:10000
 ```
+
+Modifier une table
+```sql
+ALTER TABLE crit_air_ext CHANGE cout_energie cout_energie STRING;
+```

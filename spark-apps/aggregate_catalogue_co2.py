@@ -243,11 +243,11 @@ df_catalogue_with_moyennes = df_catalogue_with_moyennes.withColumn(
         "citadine standard"
     )
     .when(
-        (col("longueur").isin("moyenne", "longue")) & (col("nbplaces") >= 5) & (col("prix") < 30000),
+        (col("longueur").isin("moyenne", "longue")) & (col("nbplaces") >= 5) & (col("prix") < 35000),
         "familiale"
     )
     .when(
-        (col("longueur").isin("longue", "tres longue")) & (col("nbplaces") >= 5) & (col("prix") > 30000),
+        (col("longueur").isin("longue", "tres longue")) & (col("nbplaces") >= 5) & (col("prix") >= 35000),
         "SUV/Crossover"
     )
     .when(
@@ -261,13 +261,20 @@ df_catalogue_with_moyennes = df_catalogue_with_moyennes.withColumn(
     .otherwise("autre")
 )
 
+df_catalogue_with_moyennes = df_catalogue_with_moyennes.groupBy("marque", "modele", "longueur", "nbplaces", "nbportes", "categorie") \
+    .agg(
+        round(avg("bonus_malus")).alias("bonus_malus"),
+        round(avg("rejets_co2")).alias("rejets_co2"),
+        round(avg("cout_energie")).alias("cout_energie")
+    )
+
+df_catalogue_with_moyennes = df_catalogue_with_moyennes.dropDuplicates()
+
+
 # Nom de la table cible
 table_name = "catalogue"
 
 table_exists = spark._jsparkSession.catalog().tableExists("concessionnaire", table_name)
-
-# Nom de la table cible
-table_name = "catalogue"
 
 # Vérifier si la table existe en exécutant une requête SQL
 table_exists = spark._jsparkSession.catalog().tableExists("concessionnaire", table_name)
