@@ -202,7 +202,37 @@ df_catalogue_with_moyennes = df_catalogue_with_co2.withColumn(
 
 # Nettoyer les colonnes inutiles
 df_catalogue_with_moyennes = df_catalogue_with_moyennes.drop("modele_co2", "moyenne_bonus_malus_marque", "moyenne_rejets_co2_marque", "moyenne_cout_energie_marque")
-df_catalogue_with_moyennes.show(n=1000)
+
+
+# Ajout de la colonne 'categorie' avec des critères précis
+df_catalogue_with_moyennes = df_catalogue_with_moyennes.withColumn(
+    "categorie",
+    when(
+        (col("longueur") == "courte") & (col("puissance") < 100) & (col("prix") < 20000),
+        "citadine economique"
+    )
+    .when(
+        (col("longueur") == "courte") & (col("puissance") >= 100) & (col("prix") >= 20000),
+        "citadine standard"
+    )
+    .when(
+        (col("longueur").isin("moyenne", "longue")) & (col("nbplaces") >= 5) & (col("prix") < 30000),
+        "familiale"
+    )
+    .when(
+        (col("longueur").isin("longue", "tres longue")) & (col("nbplaces") >= 5) & (col("prix") > 30000),
+        "SUV/Crossover"
+    )
+    .when(
+        (col("puissance") >= 200) & (col("prix") >= 40000),
+        "sportive"
+    )
+    .when(
+        (col("prix") >= 50000),
+        "luxe"
+    )
+    .otherwise("autre")
+)
 
 # Nom de la table cible
 table_name = "catalogue"
