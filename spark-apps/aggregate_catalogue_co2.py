@@ -137,6 +137,33 @@ df_co2 = df_co2.withColumn(
 )
 df_co2 = df_co2.withColumn("cout_energie", col("cout_energie").cast("float"))
 
+marques_correctes_df = df_co2.select('marque').distinct().alias('marques_correctes')
+marques_catalogue_df = df_catalogue.select('marque').distinct().alias('marques_catalogue')
+
+df_cross = marques_catalogue_df.crossJoin(broadcast(marques_correctes_df))
+
+df_cross = df_cross.withColumn('distance', levenshtein(col('marques_catalogue.marque'), col('marques_correctes.marque')))
+
+window = Window.partitionBy('marques_catalogue.marque').orderBy(col('distance'))
+df_min_distance = df_cross.withColumn('rn', row_number().over(window)).filter(col('rn') == 1)
+
+marque_mapping = df_min_distance.select(
+    col('marques_catalogue.marque').alias('marque_catalogue'),
+    col('marques_correctes.marque').alias('marque_correcte'),
+    'distance'
+).filter(col('distance') <= 2)
+
+df_catalogue_corrected = df_catalogue.join(
+    marque_mapping,
+    df_catalogue.marque == marque_mapping.marque_catalogue,
+    how='left'
+)
+
+df_catalogue = df_catalogue_corrected.withColumn(
+    'marque',
+    coalesce(col('marque_correcte'), col('marque'))
+).drop('marque_catalogue', 'marque_correcte', 'distance')
+
 # Calcul des moyennes par marque
 df_co2_agg_bonus_malus_marque = df_co2.groupby("marque").agg(round(avg("bonus_malus")).alias("moyenne_bonus_malus_marque"))
 df_co2_agg_rejets_co2_marque = df_co2.groupby("marque").agg(round(avg("rejets_co2")).alias("moyenne_rejets_co2_marque"))
