@@ -2,12 +2,7 @@
 
 Connexion au container
 ```bash
-docker exec -it hive-server bash
-```
-
-Lancer Hive
-```bash
-hive
+docker exec -it hive-server hive
 ```
 
 Création de la table Clients (Table interne)
