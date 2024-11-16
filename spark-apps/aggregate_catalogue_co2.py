@@ -109,6 +109,8 @@ df_catalogue = df_catalogue.withColumn("marque", lower(trim(col("marque"))))
 df_co2 = df_co2.withColumn("modele", lower(trim(col("modele"))))
 df_catalogue = df_catalogue.withColumn("modele", lower(trim(col("modele"))))
 
+df_catalogue = df_catalogue.withColumn("modele", regexp_replace("modele", "copper", "cooper"))
+
 # Nettoyage des données spécifiques
 df_co2 = df_co2.withColumn("bonus_malus", split(trim(df_co2["bonus_malus"]), "€").getItem(0))
 df_co2 = df_co2.withColumn("cout_energie", split(trim(df_co2["cout_energie"]), "€").getItem(0))
@@ -151,7 +153,7 @@ marque_mapping = df_min_distance.select(
     col('marques_catalogue.marque').alias('marque_catalogue'),
     col('marques_correctes.marque').alias('marque_correcte'),
     'distance'
-).filter(col('distance') <= 2)
+).filter(col('distance') <= 1)
 
 df_catalogue_corrected = df_catalogue.join(
     marque_mapping,
@@ -261,7 +263,7 @@ df_catalogue_with_moyennes = df_catalogue_with_moyennes.withColumn(
     .otherwise("autre")
 )
 
-df_catalogue_with_moyennes = df_catalogue_with_moyennes.groupBy("marque", "modele", "longueur", "nbplaces", "nbportes", "categorie") \
+df_catalogue_with_moyennes = df_catalogue_with_moyennes.groupBy("marque", "modele", "longueur", "couleur","nbplaces", "nbportes", "categorie") \
     .agg(
         round(avg("bonus_malus")).alias("bonus_malus"),
         round(avg("rejets_co2")).alias("rejets_co2"),
