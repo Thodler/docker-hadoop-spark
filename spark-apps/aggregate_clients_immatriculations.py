@@ -1,7 +1,7 @@
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 from pyspark.sql.types import BooleanType, FloatType
-from pyspark.sql.functions import trim, lower, col, count, regexp_replace, max, min, when,avg, round, rand
+from pyspark.sql.functions import trim, lower, upper, col, count, regexp_replace, max, min, when,avg, round, rand
 
 spark = SparkSession.builder\
     .appName("CleanImmatriculation")\
@@ -18,12 +18,16 @@ df_client = spark.sql("SELECT * FROM clients")
 #Renommage de la colonne "nom" en "modele"
 df_immat = df_immat.withColumnRenamed("nom", "modele")
 
-#Normalisation des marques et modèles
-df_immat = df_immat.withColumn("marque", lower(trim(col("marque"))))
-df_immat = df_immat.withColumn("modele", lower(trim(col("modele"))))
-
 #Suppression de la 1ère ligne de la table clients
 df_client = df_client.filter(df_client['immatriculation'] != 'immatriculation')
+
+#Normalisation des casses
+df_immat = df_immat.withColumn("marque", lower(trim(col("marque"))))
+df_immat = df_immat.withColumn("modele", lower(trim(col("modele"))))
+df_immat = df_immat.withColumn("immatriculation", upper(trim(col("immatriculation"))))
+
+df_client = df_client.withColumn("situationfamiliale", lower(trim(col("situationfamiliale"))))
+df_client = df_client.withColumn("immatriculation", upper(trim(col("immatriculation"))))
 
 #Correction du symbole "�" dans la colonne "longueur"
 df_immat = df_immat.withColumn("longueur", regexp_replace(col("longueur"), "�", "e"))
@@ -143,7 +147,7 @@ df_client_immat= df_client_immat.withColumn(
     )
     .when(
         (col("longueur").isin("longue", "tres longue")) & (col("nbplaces") >= 5) & (col("prix") >= 35000),
-        "SUV/Crossover"
+        "suv/crossover"
     )
     .when(
         (col("puissance") >= 200) & (col("prix") >= 40000),
