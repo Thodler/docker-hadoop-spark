@@ -1,8 +1,5 @@
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 from pyspark.sql.types import BooleanType, FloatType
 from pyspark.sql.functions import trim, lower, col, count, regexp_replace, max, min, when,avg, round, rand
 

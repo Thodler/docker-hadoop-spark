@@ -17,6 +17,11 @@ Aggregation de catalogue et Co2
 /spark/bin/spark-submit --master spark://spark-master:7077 spark-app/aggregate_catalogue_co2.py
 ```
 
+Aggregation de clients et Immatriculation
+```bash
+/spark/bin/spark-submit --master spark://spark-master:7077 spark-app/aggregate_clients_immatriculations.py
+```
+
 spark/bin/spark-submit --conf spark.sql.hive.metastore.uris=thrift://hive-metastore:9083 spark-app/aggregate_catalogue_co2.py
 
 Vider le cache des script

@@ -248,7 +248,7 @@ df_catalogue_with_moyennes = df_catalogue_with_moyennes.withColumn(
     )
     .when(
         (col("longueur").isin("longue", "tres longue")) & (col("nbplaces") >= 5) & (col("prix") >= 35000),
-        "SUV/Crossover"
+        "suv/crossover"
     )
     .when(
         (col("puissance") >= 200) & (col("prix") >= 40000),
