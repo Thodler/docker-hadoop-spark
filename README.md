@@ -15,9 +15,21 @@ Déploiment des datas
 ```bash
 ./init_import.sh
 ```
-## Liens du projet
+Ce script met en place tout le systeme des base avec le chargement de donnée et l'analyse.
+Pour simuler un autre traitement utiliser executer le script <code>./del_all_tables.sh</code>, 
+il supprime Le contenue de **MongoDB** et **Cassandra**. Et executer a nouveau <code>./init_import.sh</code> pour les 
+rechargers et actualiser les tables **Hive**
 
-### Interfaces
+## Outils
 [Hadoop & HDFS](http://localhost:9870/dfshealth.html#tab-overview)
-[Zeppelin](http://localhost:9099/#/)
+
 [Spark Worker](http://localhost:8080/)
+
+### Jupiter
+[Interface](http://localhost:8888/#/)
+
+Pour accéder a l'interface jupiter vous devez recupérer un token:
+```bash
+ docker logs notebook
+```
+Le token est afficher dans l'URL montré dans les logs.
