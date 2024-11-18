@@ -42,9 +42,9 @@ mediane = df_client.approxQuantile("age", [0.5], 0.01)[0]
 df_client = df_client.withColumn("age", when(col("age").isNull(), mediane).otherwise(col("age")))
 
 #Fusionner seul/seule en celibataire
-df_client = df_client.withColumn("situationfamiliale", regexp_replace(col("situationfamiliale"), "Seule", "celibataire"))
-df_client = df_client.withColumn("situationfamiliale", regexp_replace(col("situationfamiliale"), "Seul", "celibataire"))
-df_client = df_client.withColumn("situationfamiliale", regexp_replace(col("situationfamiliale"), "Divorcee", "divorce(e)"))
+df_client = df_client.withColumn("situationfamiliale", regexp_replace(col("situationfamiliale"), "seule", "celibataire"))
+df_client = df_client.withColumn("situationfamiliale", regexp_replace(col("situationfamiliale"), "seul", "celibataire"))
+df_client = df_client.withColumn("situationfamiliale", regexp_replace(col("situationfamiliale"), "divorcee", "divorce(e)"))
 
 # Remplacer "n/d" par null dans la colonne situationfamiliale
 df_client = df_client.withColumn(
@@ -73,6 +73,25 @@ df_client = df_client.withColumn(
     when((col("taux") >= 544) & (col("taux") <= 74185), True).otherwise(False)
 )
 
+#Fusionner F/F�minin/Femme en F
+df_client = df_client.withColumn("sexe", regexp_replace(col("sexe"), "Femme", "F"))
+df_client = df_client.withColumn("sexe", regexp_replace(col("sexe"), "F�minin", "F"))
+df_client = df_client.withColumn("sexe", regexp_replace(col("sexe"), "F", "F"))
+
+#Fusionner H/M/Masculin/Hommme en H
+df_client = df_client.withColumn("sexe", regexp_replace(col("sexe"), "Masculin", "M"))
+df_client = df_client.withColumn("sexe", regexp_replace(col("sexe"), "Homme", "M"))
+df_client = df_client.withColumn("sexe", regexp_replace(col("sexe"), "H", "M"))
+
+#Remplacer les null/? par n/d
+df_client = df_client.withColumn("sexe", when(col("sexe") == None, "n/d").otherwise(col("sexe")))
+df_client = df_client.withColumn("sexe",when(trim(col("sexe")) == "", "n/d").otherwise(col("sexe")))
+df_client = df_client.withColumn("sexe",when(trim(col("sexe")) == "N/D", "n/d").otherwise(col("sexe")))
+df_client = df_client.withColumn("sexe",regexp_replace(col("sexe"), r"\?", "n/d"))
+
+#Supprimer les n/d si les proportions le permettent
+df_client= df_client.filter(col("sexe") != "n/d")
+
 df_client = df_client.withColumn(
     "nbenfantacharge",
     when(
@@ -89,26 +108,6 @@ df_client = df_client.withColumn(
         2
     ).otherwise(col("nbenfantacharge"))
 )
-
-#Fusionner F/F�minin/Femme en F
-df_client = df_client.withColumn("sexe", regexp_replace(col("sexe"), "Femme", "f"))
-df_client = df_client.withColumn("sexe", regexp_replace(col("sexe"), "F�minin", "f"))
-df_client = df_client.withColumn("sexe", regexp_replace(col("sexe"), "F", "f"))
-
-#Fusionner H/M/Masculin/Hommme en H
-df_client = df_client.withColumn("sexe", regexp_replace(col("sexe"), "Masculin", "h"))
-df_client = df_client.withColumn("sexe", regexp_replace(col("sexe"), "M", "h"))
-df_client = df_client.withColumn("sexe", regexp_replace(col("sexe"), "Homme", "h"))
-df_client = df_client.withColumn("sexe", regexp_replace(col("sexe"), "H", "h"))
-
-#Remplacer les null/? par n/d
-df_client = df_client.withColumn("sexe", when(col("sexe") == None, "n/d").otherwise(col("sexe")))
-df_client = df_client.withColumn("sexe",when(trim(col("sexe")) == "", "n/d").otherwise(col("sexe")))
-df_client = df_client.withColumn("sexe",when(trim(col("sexe")) == "N/D", "n/d").otherwise(col("sexe")))
-df_client = df_client.withColumn("sexe",regexp_replace(col("sexe"), r"\?", "n/d"))
-
-#Supprimer les n/d si les proportions le permettent
-df_client= df_client.filter(col("sexe") != "n/d")
 
 df_nulls = df_client.filter(col("deuxiemevoiture").isNull())
 # Ajouter une colonne aléatoire et assigner 'true' ou 'false' selon les proportions
@@ -162,6 +161,7 @@ df_client_immat= df_client_immat.withColumn(
     )
     .otherwise("autre")
 )
+
 
 # Nom de la table cible
 table_name = "clients_immatriculations"
