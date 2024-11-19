@@ -232,7 +232,6 @@ df_catalogue_with_moyennes = df_catalogue_with_co2.withColumn(
 # Nettoyer les colonnes inutiles
 df_catalogue_with_moyennes = df_catalogue_with_moyennes.drop("modele_co2", "moyenne_bonus_malus_marque", "moyenne_rejets_co2_marque", "moyenne_cout_energie_marque")
 
-
 # Ajout de la colonne 'categorie' avec des critères précis
 df_catalogue_with_moyennes = df_catalogue_with_moyennes.withColumn(
     "categorie",
