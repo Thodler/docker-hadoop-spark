@@ -65,7 +65,7 @@ echo "Spark est prêt, exécution du script Spark."
 docker exec -i spark-master bash -c "spark/bin/spark-submit --master spark://spark-master:7077 --deploy-mode client --executor-memory 2g --total-executor-cores 4 --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.1 spark-app/mongo_import.py"
 docker exec -i spark-master bash -c "spark/bin/spark-submit --master spark://spark-master:7077 --deploy-mode client --executor-memory 2g --total-executor-cores 4 --packages com.datastax.spark:spark-cassandra-connector_2.12:3.1.0 spark-app/cassandra_import.py"
 docker exec -i spark-master bash -c "spark/bin/spark-submit --master spark://spark-master:7077 --deploy-mode client --executor-memory 2g --total-executor-cores 4 --packages com.datastax.spark:spark-cassandra-connector_2.12:3.1.0 spark-app/aggregate_catalogue_co2.py"
-docker exec -i spark-master bash -c "spark/bin/spark-submit --master spark://spark-master:7077 --deploy-mode client --executor-memory 2g --total-executor-cores 4 --packages com.datastax.spark:spark-cassandra-connector_2.12:3.1.0 spark-app/aggregation_clients_immatriculations.py"
+docker exec -i spark-master bash -c "spark/bin/spark-submit --master spark://spark-master:7077 --deploy-mode client --executor-memory 2g --total-executor-cores 4 --packages com.datastax.spark:spark-cassandra-connector_2.12:3.1.0 spark-app/aggregate_clients_immatriculations.py"
 
 echo "===== Importation terminée ====="
 sleep 10

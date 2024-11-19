@@ -169,11 +169,18 @@ services:
     environment:
       - SPARK_MASTER_URL=spark://spark-master:7077
       - JUPYTER_ENABLE_LAB=yes
+      - SPARK_DRIVER_MEMORY=8g
+      - SPARK_EXECUTOR_MEMORY=8g
     volumes:
       - ./notebooks:/home/jovyan/work
       - ./master/conf/hive-site.xml:/usr/local/spark/conf/hive-site.xml
     ports:
       - "8888:8888"
+    deploy:
+      resources:
+        limits:
+          memory: 16g
+          cpus: "2.0"
     depends_on:
       - spark-master
 #  zeppelin:
