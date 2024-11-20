@@ -22,6 +22,11 @@ Aggregation de clients et Immatriculation
 /spark/bin/spark-submit --master spark://spark-master:7077 spark-app/aggregate_clients_immatriculations.py
 ```
 
+Création du model de clients categories
+```bash
+/spark/bin/spark-submit --master spark://spark-master:7077 spark-app/classificateur_clients_categories.py
+```
+
 spark/bin/spark-submit --conf spark.sql.hive.metastore.uris=thrift://hive-metastore:9083 spark-app/aggregate_catalogue_co2.py
 
 Vider le cache des script
