@@ -1,6 +1,16 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import regexp_replace, lower, col, when
 
+age_inf = 18
+age_supp = 84
+taux_inf = 544
+taux_supp = 74185
+
+spark = SparkSession.builder\
+    .appName("Nettoyage de Marketing")\
+    .enableHiveSupport()\
+    .getOrCreate()
+
 spark.sparkContext.setLogLevel("OFF")
 spark.catalog.clearCache()
 spark.sql("USE concessionnaire")
